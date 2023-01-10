@@ -13,10 +13,12 @@ public class LoginTest extends TestBase {
     @Test
     public void loginTest1(){
         loginPages.loginUser();
-
+        System.out.println("Test Başladı!!!");
         String expectedPageTitle="Dashboard";
         String actualPageTitle=dashboardPage.dashboardPageTitle_loc.getText();
 
         Assert.assertEquals(actualPageTitle,expectedPageTitle,"verify that the titles are same");
+
+        System.out.println("Test Bitti!!!");
     }
 }

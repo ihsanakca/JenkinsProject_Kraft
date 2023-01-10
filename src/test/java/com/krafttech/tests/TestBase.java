@@ -25,9 +25,11 @@ public class TestBase {
         driver=Driver.get();
         driver.get(ConfigurationReader.get("url"));
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+        System.out.println("Test Başladı!!!");
     }
     @AfterMethod
     public void tearDown() {
+        System.out.println("Test Bitti!!!");
         Driver.closeDriver();
     }
 
